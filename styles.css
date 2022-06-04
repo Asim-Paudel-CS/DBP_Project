@@ -1,157 +1,72 @@
 * {
-    margin: 0px;padding: 0px;vertical-align: middle;text-align: center;
+    margin: 0px;padding: 0px;
+    box-sizing: border-box;
+    vertical-align: middle;text-align: center;
+    font-family: sans-serif;
+    z-index: 20;
+}
+::-webkit-scrollbar{
+    width: 6px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(231,233,235);
+}
+::-webkit-scrollbar-thumb{
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+.allPages{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+.pages{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    position: relative;
+}
+#page1{
+    background-image: url("Images/portPic2.jpg");
+    background-color: aliceblue;
 }
 /*Top Bar*/
 .topPanel{
-    background-color: rgb(2, 27, 44);
     height: 40px; width: 100%;
-    position: relative;
+    position: absolute;
+    top: 0px;
+    padding-inline: 20px;
+    text-align: right;
 }
 .topPanelButtons img{
-    height: 30px;width: 30px;margin: 5px;
+    height: 30px;width: 30px;margin: 5px;padding-inline: 20px;
+}
+.about{
     position: absolute;
+    top: 50px; right: 50vw;
+    padding-left: 10px;
+    text-align: left;
+    background-color: rgba(255, 173, 91, 0.355)
 }
-.topPanelButtons img#homeButton{
-    left: 0px;
+h3, h4, li{
+    text-align: left;
 }
-.topPanelButtons img#featuresButton{
+.portfolioPic{
+    position: absolute;
+    top: 0px;
     right: 0px;
+    z-index: 1;
 }
-.topPanelButtons img#homeButton:hover{
-    transform: scale(1.1)
+#portPicId{
+    width: auto;
+    max-width: 50vw;
+    max-height: 100vh;
 }
-.topPanelButtons img#featuresButton:hover{
-    transform: scale(1.1)
-}
-
-/*Main Descriptive Body*/
-.desBody{
-    overflow: hidden;
-    position: absolute;
-    top: 40px;right: 0px;left: 0px;bottom: 0px;
-    background-image: url("/Images/BlackBG.jpg");
-}
-/*Left Body*/
-#leftItems{
-    position: absolute; inset: 0; width:  400px; margin-left: 0px;
-    z-index: 20;
-    font-size: 30px;
-    color: aliceblue; 
-}
-.leftButtons{
-    text-align: right;
-    padding: 20px;
-    margin-top: 30px;
-    background: hsl(0, 0%, 100%,0.1);
-    backdrop-filter: blur(0.1em);
-    position: relative;
-    top: 40px;
-    /* display: none; */
-    /* animation: slidein 6s; */
-    /* transform: translate(0px,40px) scale(1.0); */
-}
-.leftButtons:hover{
-    cursor: grab;
-    color: rgb(13, 19, 110);
-    backdrop-filter: blur(3em);
-    /* font-weight: bold; */
-}
-/*Right Body*/
-#rightItems{
-    position: absolute; inset: 0; left: 0px;
-    margin: 30px; margin-top: 0px; margin-right: 0px;/*border: 4px solid black; */
-    background: hsl(0, 0%, 100%,0.1);
-    backdrop-filter: blur(1em);
-}
-.mapsImg{
-    border: 1px solid black;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    inset: 0;
-    -webkit-filter : blur(5px);
-}
-@keyframes slidein {
-    0%{
-        transform: scale(1.0);
-    }
-    20%{
-        transform: scale(1.5);
-    } 
-    93%{
-        transform: scale(1.5);
-    }         
-    100%{
-        transform: scale(1.0);
-    }
-}
-@keyframes popin {
-    0%{
-        transform: translate(0,0);
-        -webkit-filter : blur(5px);
-    }
-    30%{
-        transform: translate(-12px,12px);
-        -webkit-filter : blur(5px);
-    }      
-    100%{
-        transform: translate(-12px,12px);
-    }
-}
-@keyframes popout {
-    0%{
-        transform: translate(-12px,12px);
-        -webkit-filter : blur(4px);
-    }
-    15%{
-        transform: translate(-30px,30px);
-        -webkit-filter : blur(0px);
-    }
-    70%{
-        transform: translate(-30px,30px);
-        -webkit-filter : blur(0px);
-    }        
-    100%{
-        transform: translate(+2000px,15px);
-        display: none;
-    }
-}
-/* GameTab Exclusive*/
-
-body{
-    background-color: rgb(134, 62, 62);
-}
-/* .gameViewport{
-    overflow: hidden;
-    width: 1200px; height: 600px;
-    margin: 10px; margin-inline: auto;
-    background-image: url("/Images/BlackBG.jpg");
-} */
-/* #newGameBtn{
-    z-index: 20;
-    margin-top: 260px;
-    margin-inline: auto;
-    padding-block: 20px;
-    width: 200px;
-    height: 20px;
-    font-weight: bold;
-    font-family: sans-serif;
-    color: brown;
+#page2{
     background-color: aquamarine;
-}
-
-#newGameBtn:hover{
-    font-size: larger;
-} */
-
-@keyframes shiftUp {
-    0%{
-        transform: translate(0px,0px);
-        animation-timing-function: ease-in-out;
-        -webkit-animation-timing-function: ease-in-out;
-    }   
-    100%{
-        transform: translate(0px,-350px);
-    }
 }

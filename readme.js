@@ -1,3 +1,5 @@
+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
+git config --global credential.helper cache
     "use strict"; //catch coding mistakes
     Variable types are: undefined, null, boolean,
     string, symbol, number, and object (variables are case sensitive)
