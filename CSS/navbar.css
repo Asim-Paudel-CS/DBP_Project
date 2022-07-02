@@ -1,0 +1,138 @@
+/*Top Bar*/
+.topPanel{
+    height: 40px; width: 100%;
+    position: absolute;
+    top: 0em;
+    padding-inline: 20px;
+    text-align: right;
+}
+.pBtn{
+    position: relative;
+    right: 0px;
+    display: none;
+}
+.pBtn img{
+    height: 30px; width: 30px; margin: 5px;margin-right: 30px;
+}
+.aBtn{
+    position: relative;
+    right: 0px;
+    display: none;
+}
+.aBtn img{
+    height: 30px; width: 30px; margin: 5px;margin-right: 30px;
+}
+#menuBtn img{
+    height: 30px; width: 30px; margin: 5px;margin-right: 10px;
+}
+@keyframes slidein{
+    0%{
+        right: -70px;
+    }
+    10%{   
+        right: 0px;
+    }
+    100%{
+        right: 0px;
+    }
+}
+@keyframes slideout{
+    0%{
+        right: 0px;
+    }
+    10%{   
+        right: -90px;
+        opacity: 0.01;
+    }
+    100%{
+        right: -90px;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1030px){
+    .pBtn img{
+        display: none;
+    }
+    .aBtn img{
+        d
+    }
+    .pBtn{
+        display: none;
+    }
+    .aBtn{
+        display: none;
+    }
+    .pBtnTxt{
+        display: none;
+    }
+    .aBtnTxt{
+        display: none;
+    }
+    #menuBtn{
+        display: none;
+    }
+    .mobileMenu{
+        display: inline;
+    }
+}
+@media screen and (min-width: 1030px){
+    .mobileMenu{
+        display: none;
+    }
+}
+
+#menuSourceMob{
+    align-self: right;
+}
+.underlineMenu{
+    color: rgba(96, 40, 101, 0.955);
+}
+.mobileMenu{
+    position: absolute;
+    right: 20px;
+    width: 30vw;
+    background-color: rgba(240, 248, 255, 0.00);
+    height: auto;
+    z-index: 50;
+    text-align: right;
+}
+.mobmainMenuItems {
+    display: none;
+    background-color: rgba(240, 248, 255, 0.35);
+    text-align: center;
+    outline: 1px solid rgba(0, 0, 0, 0.275);
+}
+.mobileMenu ul li{
+    text-align: center;
+    display: block;
+    list-style-type: none;
+    padding: 3px;
+    backdrop-filter: blur(3px);
+}
+.primaryitemmob{
+    background-color: rgba(37, 29, 29, 0.075);
+    backdrop-filter: blur(3px);
+}
+.primaryitemmob:hover{
+    background-color: rgba(37, 29, 29, 0.025);
+    backdrop-filter: blur(9px);
+}
+.aitemmob {
+    display: none;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(3px);
+}
+.aitemmob :hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(9px);
+    outline: 1px solid rgba(0, 0, 0, 0.275);
+}
+.snritemmob {
+    display: none;
+}
+
+.mobileMenu img{
+    height: 30px; width: 30px; margin: 5px;margin-right: 10px;
+}

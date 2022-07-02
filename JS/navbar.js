@@ -1,5 +1,4 @@
-"use strict"
-window.onload=function(){//Only when webpage loads
+function navBar(){
   var nomenu = true;
   var mainmenu = false;
   var auxmenu = false;
@@ -15,7 +14,81 @@ window.onload=function(){//Only when webpage loads
   const mediaBtn = document.getElementById("mediaBtnMain");
   const rnsBtnItems = document.getElementsByClassName("rnsBtn");
   const rnsBtn = document.getElementById("rnsBtnMain");
+//mobilenav
+  var nomenumob = true;
+  var mainmenumob = false;
+  const menuSourceMob = document.getElementById("menuSourceMob");
+  const mobMainMenuItems = document.getElementsByClassName("mobmainMenuItems");
+  const mobabtBtn = document.getElementById("abtitemmob");
+  const mobabtindBtn = document.getElementById("abtitemindmob");
+  const mobpubBtn = document.getElementById("pubitemmob");
+  const mobpubindBtn = document.getElementById("pubitemindmob");
+  const mobmediaBtn = document.getElementById("mediaitemmob");
+  const mobmediaindBtn = document.getElementById("mediaitemindmob");
+  const mobsnrBtn = document.getElementById("snritemmob");
+  const mobsnrindBtn = document.getElementById("snritemindmob");
+//mobile redirects//
+  menuSourceMob.addEventListener("click", e => {
+    if (nomenumob){    
+      playMobilePrimaryOut();
+      nomenumob = false;
+      mainmenumob = true;
+    }
+    else if(mainmenumob){
+      playMobilePrimaryIn();
+      playMobileAIn();
+      nomenumob = true;
+      mainmenumob = false;
+    }
+  });
+  mobabtBtn.addEventListener("click", e => {
+    playMobileAIn()
+    playMobileAbtOut();
+  });
+  mobpubBtn.addEventListener("click", e => {
+    playMobileAIn()
+    playMobilePubOut();
+  });
+  mobmediaBtn.addEventListener("click", e => {
+    playMobileAIn()
+    playMobileMediaOut();
+  });
+  mobsnrBtn.addEventListener("click", e => {
+    playMobileAIn()
+    playMobileSnrOut();
+  });
+  function playMobileAIn(){
+    mobabtindBtn.style.display = "none";
+    mobpubindBtn.style.display = "none";
+    mobmediaindBtn.style.display = "none";
+    mobsnrindBtn.style.display = "none";
+  }
+  function playMobileAbtOut(){
+    mobabtindBtn.style.display = "block";
+  }
+  function playMobilePubOut(){
+    mobpubindBtn.style.display = "block";
+  }
+  function playMobileMediaOut(){
+    mobmediaindBtn.style.display = "block";
+  }
+  function playMobileSnrOut(){
+    mobsnrindBtn.style.display = "block";
+  }
   
+  function playMobilePrimaryOut(){
+    for (var i = 0; i<mobMainMenuItems.length;i++){
+      var mobMainMenuItemsind = mobMainMenuItems[i];
+      mobMainMenuItemsind.style.display = "block";
+    }
+  }
+  function playMobilePrimaryIn(){
+    for (var i = 0; i<mobMainMenuItems.length;i++){
+      var mobMainMenuItemsind = mobMainMenuItems[i];
+      mobMainMenuItemsind.style.display = "none";
+    }
+  }
+//end mobile items//
   //Redirects//
   menuBtn.addEventListener("click", e => {
     // window.location.href = "/gameTab.html";
@@ -138,4 +211,4 @@ window.onload=function(){//Only when webpage loads
     element.offsetHeight;
     element.style.animation =null;
   }
-}//On Load End 
+}

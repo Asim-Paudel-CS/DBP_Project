@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="styles.css">
-        <script src="/indexscript.js"></script>
+        <link rel="stylesheet" href="/CSS/styles.css">
+        <link rel="stylesheet" href="/CSS/stylespg1.css">
+        <link rel="stylesheet" href="/CSS/navbar.css">
+        <link rel="stylesheet" href="/CSS/stylespg2.css">
+        <script src="/JS/script.js"></script>
+        <script src="/JS/navbar.js"></script>
+        <script src="/JS/fstpage.js"></script>
         <link rel="icon" href="https://img.icons8.com/doodle/344/kawaii-dinosaur.png">
         <title>Damaru Ballav Paudel</title>
-        <!-- <meta http-equiv="refresh" content="2" > -->
     </head>
     <body>
         <div class="allPages">
             <div class="pages" id="page1">
-                <div class="topPanel">
+
+                <!-- NAVBAR -->
+                <div class="topPanel"> 
                     <span class="pBtn" id="abtBtnMain"><span class="pBtnTxt">About</span><img src="Images/Mail.png"></span>
                     <span class="pBtn" id="pubBtnMain"><span class="pBtnTxt">Publications</span><img src="Images/twitter logo.png"></span>
                     <span class="pBtn" id="mediaBtnMain"><span class="pBtnTxt">Media</span> <img src="Images/Mail.png"></span>
@@ -39,31 +45,85 @@
                     <span class="aBtn rnsBtn" id="recData"><span class="aBtnTxt">Recent Data</span><img src="Images/Mail.png"></span>
                     <!-- Menu Button -->
                     <span id="menuBtn"><span class="pBtnTxt">Menu</span><img id="menuSource" src="Images/menu.png"></span>
+                    <!-- mobile navbar -->
+                    <div class="mobileMenu">                                   
+                        <img id="menuSourceMob" src="Images/menu.png"></span>
+                        <div class="mobmainMenuItems">
+                            <ul>
+                                <li class="primaryitemmob" id="abtitemmob"><span class ="underlineMenu">About</span>
+                                    <ul class="aitemmob" id="abtitemindmob">
+                                    <li>Profile</li>
+                                    <li>Research Interest</li>
+                                    <li>Curriculum Vitae</li>
+                                    </ul>
+                                </li>
+                                <li class="primaryitemmob" id="pubitemmob"><span class ="underlineMenu">Publications</span>
+                                    <ul class="aitemmob" id="pubitemindmob">
+                                    <li>Recent Articles</li>
+                                    <li>Journal Articles</li>
+                                    <li>Books</li>
+                                    <li>Working Papers</li>
+                                    <li>Nepali Articles</li>
+                                    </ul>
+                                </li>
+                                <li class="primaryitemmob" id="mediaitemmob"><span class ="underlineMenu">Media</span>
+                                    <ul class="aitemmob" id="mediaitemindmob">
+                                    <li>In News</li>
+                                    <li>Interviews</li>
+                                    <li>Presentations</li>
+                                    </ul>
+                                </li>
+                                <li class="primaryitemmob" id="snritemmob"><span class ="underlineMenu">Statistics And Research</span>
+                                    <ul class="aitemmob" id="snritemindmob">
+                                    <li>Input-Output table of Nepal</li>
+                                    <li>Social Accounting Matrix of Nepal</li>
+                                    <li>Theses</li>
+                                    <li>Recent Data</li>
+                                    </ul>
+                                </li>
+                                <li class="primaryitemmob"><span class ="underlineMenu">Blogs</span></li>
+                                <li class="primaryitemmob"><span class ="underlineMenu">Contact</span></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+                <!-- NAVBAR END -->
+                
                 <div class="about">
-                    <h3>About</h3>
-                    I am a career diplomat by profession and an avid learner and researcher in the field of Economics. I received a Doctor of Philosophy in Economics from the University of Tokyo, Japan in 2014. The title of my Ph.D. thesis was “Land Reform in Nepal: Equity, Efficiency, and Economy.”
-                    <br><br>
-                    <h4>Research Areas</h4>
-                    <ul>
-                        <li>Development Microeconomics</li>
-                        <li>Empirical Economics</li>
-                        <li>Trade and Economic Development</li>
-                        <li>Regional Integration</li>
-                        <li>Development Cooperation</li>
-                        <li>Social Networks</li>
-                        <li>Labour Migration</li>
-                        <li>Land Migration</li>
-                        <li>Input-Output Table</li>
-                        <li>Social Accounting Marices</li>
-                        <li>Equilibrium Modelling</li>
-                        <li>Economic Diplomacy</li>
-                        <li>Good Governance</li>
-                        <li>Contemporary Economic Issues</li>
-                    </ul>
-                    <br><br>
-                    <h4>Works</h4>
-                    I have published international journal articles focusing on land reform, poverty, growth, education, children preference decision, labour migration, regional trade, etc. ,and hundreds of articles in Nepali National Daily Newspapers. I have also presented papers in international seminars/symposiums/colloquiums.
+                    <span class = "fstPgTxt" id="aboutfstPgText">
+                        <span class = "fstPgHead" id="aboutfstPgHead">About<br></span>
+                        I am a career diplomat by profession and an avid learner and researcher in the field of Economics. I received a Doctor of Philosophy in Economics from the University of Tokyo, Japan in 2014. The title of my Ph.D. thesis was “Land Reform in Nepal: Equity, Efficiency, and Economy.”
+                        <br><br>
+                    </span>
+                    <span class = "fstPgTxt" id="rafstPgText">
+                        <span class = "fstPgHead" id="rafstPgHead">Research Areas<br></span>
+                        <ul>
+                            <li>Development Microeconomics</li>
+                            <li>Empirical Economics</li>
+                            <li>Trade and Economic Development</li>
+                            <li>Regional Integration</li>
+                            <li>Development Cooperation</li>
+                            <li>Social Networks</li>
+                            <li>Labour Migration</li>
+                            <li>Land Migration</li>
+                            <li>Input-Output Table</li>
+                            <li>Social Accounting Marices</li>
+                            <li>Equilibrium Modelling</li>
+                            <li>Economic Diplomacy</li>
+                            <li>Good Governance</li>
+                            <li>Contemporary Economic Issues</li>
+                        </ul>
+                        <br><br>
+                    </span>
+                    <span class = "fstPgTxt" id="wfstPgText">
+                        <span class = "fstPgHead" id="rafstPgHead">Works<br></span>
+                        I have published international journal articles focusing on land reform, poverty, growth, education, children preference decision, labour migration, regional trade, etc. ,and hundreds of articles in Nepali National Daily Newspapers. I have also presented papers in international seminars/symposiums/colloquiums.
+                    </span>
+                </div>
+                <div class="threedots">
+                    <span class="dot" id="dot1"></span>
+                    <span class="dot" id="dot2"></span>
+                    <span class="dot" id="dot3"></span>
                 </div>
                 <div class="portfolioPic">
                     <img id="portPicId" src="Images/portpiconly.png">

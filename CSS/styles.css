@@ -1,0 +1,37 @@
+* {
+    margin: 0px;padding: 0px;
+    box-sizing: border-box;
+    vertical-align: middle;text-align: center;
+    font-family: sans-serif;
+    z-index: 20;
+}
+::-webkit-scrollbar{
+    width: 6px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(231,233,235);
+}
+::-webkit-scrollbar-thumb{
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.allPages{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+.pages{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+
+

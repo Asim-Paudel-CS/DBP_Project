@@ -1,0 +1,114 @@
+#page1{
+    background-image: url("../Images/portPic2.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-color: aliceblue;
+}
+
+.about{
+    transform: skew(0.5deg) translateX(10px);
+    position: absolute;
+    top: 50px; left: 0px;
+    width: 60vw;
+    height: calc(100vh - 80px);
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 0px;
+    padding-inline: 0px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 173, 91, 0.2);
+    backdrop-filter: blur(3px);
+}
+li{
+    text-align: left;
+    list-style-type: none;
+}
+.fstPgHead{
+    text-align: left;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(141, 32, 32);
+    font-size: 60px;
+    font-weight: bold;
+    text-decoration: underline bold;
+    position: relative;
+    animation: slidein 10s;
+}
+.fstPgTxt{
+    text-align: left;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgba(31, 20, 63, 0.799);
+    font-size: 20px;
+    text-decoration: underline bold;
+    position: relative;
+    animation: slidein 10s;
+}
+@keyframes BounceTxt{
+    0%{
+        top: -300px;
+        right: -190px;
+    }20%{
+        top: 0px;
+        right: -107px;
+    }
+    40%{
+        top: -150px;
+        right: -100px;
+    }
+    45%{
+        top: -140px;
+        right: -100px;
+    }
+    60%{
+        top: 0px;
+        right: -50px;
+    }
+    70%{
+        top: -75px;
+        right: -25px;
+    }
+    75%{
+        top: -60px;
+        right: -25px;
+    }
+    90%{
+        top: 0px;
+        right: 0px;
+    }
+}
+.threedots{
+    transform: skew(0.5deg) translateX(10px);
+    position: absolute;
+    bottom: 3px; left: 0px;
+    width: 60vw;
+}
+.dot {
+    height: 25px;
+    width: 25px;
+    margin-left: 30px;
+    background-color: rgba(49, 148, 197, 0.622);
+    border-radius: 50%;
+    outline: 7px solid rgba(50, 44, 59, 0.568);
+    outline-offset: -8px;
+    display: inline-block;
+  }
+#rafstPgText{
+    display: none;
+}
+#wfstPgText{
+    display: none;
+}
+.portfolioPic{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1;
+}
+#portPicId{
+    width: auto;
+    max-width: 50vw;
+    max-height: 90vh;
+}
