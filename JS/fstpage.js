@@ -9,7 +9,8 @@ function slideShowMain(){
     const dot3 = document.getElementById("dot3");
     slideshow();
     function slideshow(){
-        console.log(stateSlideShow);
+        window.scrollTo(0, 0);
+        // console.log(stateSlideShow);
         switch(stateSlideShow){
             case 1:
                 reset_animation(fstSlide);
